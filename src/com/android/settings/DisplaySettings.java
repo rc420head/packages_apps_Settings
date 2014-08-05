@@ -87,6 +87,7 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
     private CheckBoxPreference mWakeUpWhenPluggedOrUnplugged;
     private PreferenceCategory mWakeUpOptions;
     private ListPreference mToastAnimation;
+    private CheckBoxPreference mProximityWake;
 
     private final Configuration mCurConfig = new Configuration();
 
@@ -180,6 +181,17 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
                         Settings.System.VOLUME_WAKE_SCREEN, 0) == 1);
                 mVolumeWake.setOnPreferenceChangeListener(this);
             }
+        }
+
+        mProximityWake = (CheckBoxPreference) findPreference(KEY_PROXIMITY_WAKE);
+        if(!getResources().getBoolean(
+                com.android.internal.R.bool.config_proximityCheckOnWake)) {
+                mWakeUpOptions.removePreference(mProximityWake);
+                counter++;
+        } else {
+            mProximityWake.setChecked(Settings.System.getInt(getContentResolver(),
+                    Settings.System.PROXIMITY_ON_WAKE, 0) == 1);
+            mProximityWake.setOnPreferenceChangeListener(this);
         }
 
         mWakeUpWhenPluggedOrUnplugged =
@@ -476,6 +488,11 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
                     Toast.LENGTH_SHORT).show();
         }
 
+        if (KEY_PROXIMITY_WAKE.equals(key)) {
+            Settings.System.putInt(getContentResolver(),
+                    Settings.System.PROXIMITY_ON_WAKE,
+                    ((Boolean) objValue).booleanValue() ? 1 : 0);
+        }
         return true;
     }
 }
