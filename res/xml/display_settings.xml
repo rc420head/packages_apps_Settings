@@ -101,6 +101,32 @@
 
     </PreferenceCategory>
 
+        <!-- Dynamic system bars -->
+        <PreferenceCategory
+            android:key="dynamic_system_bars_category"
+            android:title="@string/dynamic_system_bars_category_title"/>
+
+        <CheckBoxPreference
+            android:key="dynamic_status_bar"
+            android:title="@string/dynamic_status_bar_title"
+            android:summary="@string/dynamic_status_bar_summary" />
+
+        <CheckBoxPreference
+            android:key="dynamic_navigation_bar"
+            android:title="@string/dynamic_navigation_bar_title"
+            android:summary="@string/dynamic_navigation_bar_summary" />
+
+        <CheckBoxPreference
+            android:key="dynamic_system_bars_gradient"
+            android:title="@string/dynamic_system_bars_gradient_title"
+            android:summary="@string/dynamic_system_bars_gradient_summary" />
+
+        <CheckBoxPreference
+            android:key="dynamic_status_bar_filter"
+            android:title="@string/dynamic_status_bar_filter_title"
+            android:summary="@string/dynamic_status_bar_filter_summary" />
+
+        <!-- Notifications -->
         <PreferenceCategory
             android:key="category_light_options"
             android:title="@string/display_category_light_options_title" >
