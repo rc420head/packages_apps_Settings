@@ -42,7 +42,7 @@ import android.widget.Toast;
 import com.android.internal.view.RotationPolicy;
 import com.android.settings.DreamSettings;
 import com.android.settings.slim.DisplayRotation;
-
+import com.android.settings.DisplaySettings;
 import java.util.ArrayList;
 
 public class DisplaySettings extends SettingsPreferenceFragment implements
@@ -69,6 +69,7 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
     private static final String KEY_SCREEN_OFF_GESTURE_SETTINGS = "screen_off_gesture_settings";
     private static final String KEY_TOAST_ANIMATION = "toast_animation";
     private static final String DISABLE_IMMERSIVE_MESSAGE = "disable_immersive_message";
+    private static final String KEY_PROXIMITY_WAKE = "proximity_on_wake";
 
     private static final String ROTATION_ANGLE_0 = "0";
     private static final String ROTATION_ANGLE_90 = "90";
@@ -183,7 +184,7 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
             }
         }
 
-        mProximityWake = (CheckBoxPreference) findPreference(KEY_PROXIMITY_WAKE);
+       mProximityWake = (CheckBoxPreference) findPreference(KEY_PROXIMITY_WAKE);
         if(!getResources().getBoolean(
                 com.android.internal.R.bool.config_proximityCheckOnWake)) {
                 mWakeUpOptions.removePreference(mProximityWake);
@@ -488,11 +489,12 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
                     Toast.LENGTH_SHORT).show();
         }
 
-        if (KEY_PROXIMITY_WAKE.equals(key)) {
+     if (KEY_PROXIMITY_WAKE.equals(key)) {
             Settings.System.putInt(getContentResolver(),
                     Settings.System.PROXIMITY_ON_WAKE,
                     ((Boolean) objValue).booleanValue() ? 1 : 0);
         }
         return true;
     }
+    
 }
