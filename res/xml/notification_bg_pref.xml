@@ -44,7 +44,7 @@
             android:title="@string/tinted_statusbar_filter_title"
             android:summary="@string/tinted_statusbar_filter_summary" />
 
-        <com.android.settings.candykat.SeekBarPreference
+        <com.android.settings.candykat.chameleonos.SeekBarPreference
             android:key="tinted_statusbar_transparent"
             android:persistent="false"
             android:title="@string/tinted_statusbar_transparent_title"
@@ -54,7 +54,7 @@
             settings:unitsLeft=""
             settings:unitsRight="%" />
 
-        <com.android.settings.candykat.slimSeekBarPreference
+        <com.android.settings.candykat.chameleonos.SeekBarPreference
             android:key="tinted_navbar_transparent"
             android:persistent="false"
             android:title="@string/tinted_navbar_transparent_title"
