@@ -131,16 +131,23 @@
     <!-- System theming -->
     <string name="theme_category_title">System theme</string>
     <string name="system_theme_style_title">Background color</string>
-    <string name="system_theme_style_auto">Wallpaper based</string>
+    <string name="system_theme_style_auto">Automatic (wallpaper based)</string>
     <string name="system_theme_style_light">Light UI</string>
     <string name="system_theme_style_dark">Dark UI</string>
+    <string name="system_theme_style_black">Black UI</string>
     <string name="accent_picker_dialog_title">Select an accent color</string>
     <string name="theme_accent_picker_title">Accent color</string>
     <string name="theme_accent_picker_summary">Select system theme accent color</string>
     <string name="theme_accent_picker_default">Default</string>
-    <string name="theme_applied_toast">Theme applied.</string>
     <string name="applying_theme_toast">Applying theme, please wait...</string>
-
+    <string name="theme_applied_toast">Theme applied!</string>
     <string name="gesture_double_tap_power_torch_toast">Screen off torch gesture is now disabled</string>
+
+    <!-- QS tile styles -->
+    <string name="qs_tile_style_title">QS tile style</string>
+    <string name="qstile_default">Default</string>
+    <string name="qstile_circle_trim">Circle with trim</string>
+    <string name="qstile_dual_tone_circle">Dual-toned circle</string>
+    <string name="qstile_squircle_trim">Squircle with trim</string>
 
 </resources>
