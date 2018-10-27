@@ -146,6 +146,7 @@ public class MyDeviceInfoFragment extends DashboardFragment
                         EntityHeaderController.ActionType.ACTION_NONE);
 
         // TODO: There may be an avatar setting action we can use here.
+/** Remove avatar icon & user info from About Phone screen
         final int iconId = bundle.getInt("icon_id", 0);
         if (iconId == 0) {
             UserManager userManager = (UserManager) getActivity().getSystemService(
@@ -155,7 +156,7 @@ public class MyDeviceInfoFragment extends DashboardFragment
             controller.setIcon(
                     com.android.settingslib.Utils.getUserIcon(getActivity(), userManager, info));
         }
-
+*/
         controller.done(context, true /* rebindActions */);
     }
 
