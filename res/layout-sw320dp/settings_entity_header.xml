@@ -22,8 +22,8 @@
     style="@style/EntityHeader"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:paddingTop="24dp"
-    android:paddingBottom="24dp">
+    android:paddingTop="15dp"
+    android:paddingBottom="15dp">
 
     <LinearLayout
         android:id="@+id/entity_header_content"
@@ -32,12 +32,12 @@
         android:layout_weight="1"
         android:background="?android:attr/selectableItemBackground"
         android:orientation="horizontal"
-        android:paddingStart="56dp">
+        android:paddingStart="5dp">
 
         <ImageView
             android:id="@+id/entity_header_icon"
-            android:layout_width="48dp"
-            android:layout_height="48dp"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
             android:scaleType="fitCenter"
             android:layout_gravity="center_horizontal"
             android:antialias="true" />
@@ -97,7 +97,7 @@
             android:minWidth="@dimen/min_tap_target_size"
             android:src="@null"
             android:tint="?android:attr/colorAccent" />
-
+h
         <ImageButton
             android:id="@android:id/button2"
             style="?android:attr/actionOverflowButtonStyle"
